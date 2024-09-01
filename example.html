@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap example page 따라하기</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body{
+            height:1200px;
+        }
+        #header{
+            background-color: black;
+            color:white;
+            width: 100%;
+            padding:12px 15px;
+            margin: 0px -10px;
+            top:0;
+            position: fixed;
+        }
+        .clickables{
+            cursor:pointer;
+            margin-right:15px;
+        }
+        .clickables:first-child{
+            font-size: 20px;
+        }
+        .clickables:nth-child(3){
+            color:#adb5bd;
+        }
+        .clickables:nth-child(3):hover{
+            color:#ced4da;
+        }
+        .clickables:nth-child(4){
+            color:#6c757d;
+            cursor:default;
+        }
+        .searchBox{
+            float:right;
+            margin-right:30px;
+            margin-top:-5px;
+        }
+        .inputText{
+            padding:8px;
+            border-radius: 6px;
+            font-size: 15px;
+            border: 2px solid #ccc;
+        }
+        .inputText:focus{
+            outline:1px solid #007bff;
+        }  
+        .searchButton{
+            background-color:black;
+            border-radius: 6px;
+            border-color:#198754;
+            color:#198754;
+            padding:8.5px;
+            padding-bottom:px;
+            border: 1px solid; 
+            font-size: 1rem;
+            
+        }
+        .searchButton:hover{
+            background-color: #198754;
+            border-color:#198754;
+            color:white;
+        }
+        #main{
+            background-color:#f8f9fa;
+            padding:30px 50px 50px 50px;
+            
+            margin:8%;
+            margin-top: 70px;
+            font-size: 20px;
+            font-weight:200;
+            border-radius: 8px;
+        }
+        h1{
+            font-weight: 400;
+            font-size: 190%;
+            margin-bottom:-10px;
+        }
+        .viewButton{
+            background-color:#0d6efd;
+            border-radius: 10px;
+            border-color:#0d6efd;
+            color:white;
+            padding:12px 20px;
+
+            border: 1px solid; 
+            font-size: 1.2rem;
+        }
+        .viewButton:hover{
+            background-color: #198754;
+            border-color:#198754;
+            color:white;
+        }
+        .dropbtn {
+            background-color: #712cf9;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+        }
+        .dropdown {
+            bottom:20px;
+            right:20px;
+            position: fixed;
+            display: inline-block;
+
+            }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            top:-280%;
+            left:-155%;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            border-radius: 8px;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {background-color: #ddd;}
+        .dropdown:hover .dropdown-content {display: block;}
+        .dropdown:hover .dropbtn {background-color: #5a23c8;}
+    </style>
+
+
+</head>
+<body>
+    <div id="header">
+    
+        <a class="clickables" onclick="location.href='example.html'">Fixed navbar</a>
+        <a class="clickables" onclick="location.href='example.html'">Home</a>
+        <a class="clickables" onclick="location.href='example.html'">Link</a>
+        <a class="clickables" onclick="location.href='example.html'">Disabled</a>
+        
+        <span class="searchBox" action="" method="get">
+            <input class="inputText" type="text" name="" placeholder="Search">
+            <button class="searchButton" type="submit">Search</button>
+        </span>
+    </div>
+
+    <div id="main">
+        <h1>Navbar example</h1>
+        <p>This example is a quick exercise to illustrate how fixed to top navbar works. 
+            As you scroll, it will remain fixed to the top of your browser’s viewport.</p>
+
+        <button class="viewButton" href="https://getbootstrap.com/docs/5.3/components/navbar/">View navbar docs »</button>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn"><i class="fas fa-sun"></i> <i class="fa-solid fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <a href="#"><i class="fas fa-sun"></i> Light</a>
+          <a href="#"><i class="fa-solid fa-moon"></i> Dark</a>
+          <a href="#"><i class="fa-solid fa-circle-half-stroke"></i> Auto</a>
+        </div>
+      </div>
+    
+</body>
+</html>
